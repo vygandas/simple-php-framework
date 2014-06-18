@@ -1,0 +1,24 @@
+<h1>Products</h1>
+<table>
+<thead>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Delivery</th>
+    </tr>
+</thead>
+<tbody>    
+    {foreach $products as $productkey => $product}
+       <tr>
+        {foreach $product as $key => $value}
+            <td>
+                {$value}
+            </td>
+        {/foreach} 
+        <td>
+            <a href="{$baseUrl}/products/details/{$productkey}">Details</a>
+        </td>
+       </tr>
+    {/foreach}
+</tbody>
+</table>

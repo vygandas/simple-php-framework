@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>{_t("WebShop")}</title>
+    <link rel="stylesheet" href="{Assets::GetCss()}" />
+</head>
+<body>
+
+<div id="everything">
+    <div id="leftpanel">
+        <h1>{_t("Welcome to Ouvet")}</h1>
+        <img src="{A::Link('images/says_hi.png')}" width="220" />
+        
+    </div>
+    <div id="rightpanel">
+        <div id="navigation">
+            <a href="{A::Link('/')}">{_t("Home")}</a>&nbsp;|&nbsp;<a href="{A::Link('products')}">{_t("Products")}</a>&nbsp;|&nbsp;
+            <a href="{R::ToNamed('users')}">{_t("Users")}</a>
+        </div>
+        <div>
+            {$contents}
+        </div>
+    </div>
+    <script src="{Assets::GetJs()}"></script>
+</div>
+
+</body>
+</html>
